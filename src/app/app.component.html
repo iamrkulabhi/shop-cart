@@ -1,3 +1,9 @@
 <h2>{{title}}</h2>
+<p>
+  <button mat-raised-button color="primary"
+      [matBadge]="cartItemCount" matBadgePosition="after" MatBadgeSize="large" matBadgeColor="accent">
+      Cart <mat-icon>shopping_cart</mat-icon>
+  </button>
+</p>
 <router-outlet></router-outlet>
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../services/products.service';
 import { Product } from '../services/product';
 import { Router } from '@angular/router';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-list-products',
@@ -14,7 +15,8 @@ export class ListProductsComponent implements OnInit {
 
   constructor(
     private productService: ProductsService,
-    private router: Router
+    private router: Router,
+    private cartService: CartService
     ) { }
 
   ngOnInit() {
@@ -24,6 +26,11 @@ export class ListProductsComponent implements OnInit {
 
   getProducts() {
     this.allProducts = this.productService.getProducts();
+  }
+
+  addToCart(productId: number) {
+// tslint:disable-next-line: no-unused-expression
+    this.cartService.addToCart(productId);
   }
 
   goTo(id: number) {

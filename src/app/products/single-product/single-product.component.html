@@ -1,3 +1,22 @@
-<p>
-  single-product works!
-</p>
+<mat-card class="example-card">
+  <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+  <mat-card-title>{{currentProduct.name}}</mat-card-title>
+  <mat-card-content>
+      <p>
+          {{currentProduct.description}}
+      </p>
+      <p>
+        {{currentProduct.price | currency :'USD':'symbol':'1.2-2' }}
+      </p>
+      <p *ngIf="currentProduct.stock > 0; else outOfStock">
+        Instock : {{currentProduct.stock}}
+      </p>
+      <ng-template #outOfStock>
+        Out of Stock
+      </ng-template>
+  </mat-card-content>
+  <mat-card-actions>
+      <button mat-raised-button>Add to cart</button>
+      <button mat-raised-button>Buy Now</button>
+  </mat-card-actions>
+</mat-card>

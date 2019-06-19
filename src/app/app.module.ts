@@ -8,6 +8,7 @@ import { SingleProductComponent } from './products/single-product/single-product
 import { CartProductsComponent } from './products/cart-products/cart-products.component';
 import { CheckoutProductsComponent } from './products/checkout-products/checkout-products.component';
 import { ProductsService } from './products/services/products.service';
+import { CartService } from './products/services/cart.service';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -29,7 +30,7 @@ import { MaterialModule } from './material/material.module';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [ ProductsService ],
+  providers: [ ProductsService, CartService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
