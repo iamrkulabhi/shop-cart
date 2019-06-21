@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ProductsService } from '../services/products.service';
 import { Product } from '../services/product';
 import { Router } from '@angular/router';
 import { CartService } from '../services/cart.service';
+import { Cart } from '../services/cart';
 
 @Component({
   selector: 'app-list-products',
@@ -21,7 +22,7 @@ export class ListProductsComponent implements OnInit {
 
   ngOnInit() {
     this.getProducts();
-    console.log(this.allProducts);
+    // console.log(this.allProducts);
   }
 
   getProducts() {
@@ -30,7 +31,8 @@ export class ListProductsComponent implements OnInit {
 
   addToCart(productId: number) {
 // tslint:disable-next-line: no-unused-expression
-    this.cartService.addToCart(productId);
+    const updatedCart = this.cartService.addToCart(productId);
+    this.cartService.updateCartService(updatedCart);
   }
 
   goTo(id: number) {

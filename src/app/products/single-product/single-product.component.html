@@ -16,7 +16,7 @@
       </ng-template>
   </mat-card-content>
   <mat-card-actions>
-      <button mat-raised-button>Add to cart</button>
-      <button mat-raised-button>Buy Now</button>
+      <button (click)="addToCart(currentProduct.id)" mat-raised-button>Add to cart</button>
+      <button (click)="addToCartAndBuy(currentProduct.id)" mat-raised-button>Buy Now</button>
   </mat-card-actions>
 </mat-card>

@@ -1,7 +1,12 @@
-<h2>{{title}}</h2>
+<h2 (click)="gotoHome()">{{title}}</h2>
 <p>
-  <button mat-raised-button color="primary"
-      [matBadge]="cartItemCount" matBadgePosition="after" MatBadgeSize="large" matBadgeColor="accent">
+  <button
+    mat-raised-button color="primary"
+    [matBadge]="cartItemCount"
+    matBadgePosition="after"
+    MatBadgeSize="large"
+    matBadgeColor="accent"
+    (click)="gotoCart()">
       Cart <mat-icon>shopping_cart</mat-icon>
   </button>
 </p>
