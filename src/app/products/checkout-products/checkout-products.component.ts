@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-checkout-products',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutProductsComponent implements OnInit {
 
+  name: string;
+  email: string;
+  address: string;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onCheckout(form: NgForm) {
+    console.log('checkout.');
   }
 
 }

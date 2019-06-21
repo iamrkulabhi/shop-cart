@@ -1,3 +1,16 @@
-<p>
-  checkout-products works!
-</p>
+<form #f (ngSubmit)="onCheckout(f)">
+  <div class="example-container">
+    <mat-form-field>
+      <input matInput placeholder="Name" name="name" [(ngModel)]="name"/>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Email" name="email" [(ngModel)]="email"/>
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput placeholder="Address" name="address" [(ngModel)]="address"></textarea>
+    </mat-form-field>
+  </div>
+  <button mat-raised-button type="submit">Click me!</button>
+</form>

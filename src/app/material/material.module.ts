@@ -6,6 +6,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatTableModule} from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule, MatInputModule } from '@angular/material';
 
 const matModules = [
   MatGridListModule,
@@ -13,7 +15,10 @@ const matModules = [
   MatButtonModule,
   MatIconModule,
   MatBadgeModule,
-  MatTableModule
+  MatTableModule,
+  MatSelectModule,
+  MatFormFieldModule,
+  MatInputModule
 ];
 
 @NgModule({
