@@ -59,4 +59,20 @@ export class CartService {
     }
     return;
   }
+
+  updateProductStock(chectoutDetails: Cart[]) {
+    let allProduct = this.productService.getProducts();
+    chectoutDetails.forEach(el => {
+      let currentProduct = this.productService.getProduct(el.itemId);
+      if (el.itemId === currentProduct.id) {
+        currentProduct.stock = currentProduct.stock - el.itemQty;
+      }
+    });
+  }
+
+  clearCart() {
+    this.cartItems = [];
+    this.updateCartService(this.cartItems);
+  }
+
 }

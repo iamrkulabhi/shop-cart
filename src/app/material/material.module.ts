@@ -8,6 +8,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatTableModule} from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatSelectModule, MatInputModule } from '@angular/material';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 const matModules = [
   MatGridListModule,
@@ -18,7 +19,8 @@ const matModules = [
   MatTableModule,
   MatSelectModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatProgressSpinnerModule
 ];
 
 @NgModule({

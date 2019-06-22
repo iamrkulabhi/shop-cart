@@ -41,7 +41,9 @@ export class CartProductsComponent implements OnInit {
   }
 
   gotoCheckout() {
-    this.router.navigate(['/checkout']);
+    if (this.cartData.length > 0) {
+      this.router.navigate(['/checkout']);
+    }
   }
 
 }

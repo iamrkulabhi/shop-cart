@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Product } from './product';
 import { Observable } from 'rxjs';
+import { CartService } from './cart.service';
+import { Cart } from './cart';
 
 @Injectable({
   providedIn: 'root'

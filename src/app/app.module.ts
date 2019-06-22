@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { FormsModule } from '@angular/forms';
+import { SpinnerComponent } from './material/spinner/spinner.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     ListProductsComponent,
     SingleProductComponent,
     CartProductsComponent,
-    CheckoutProductsComponent
+    CheckoutProductsComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

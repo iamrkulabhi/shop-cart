@@ -12,5 +12,6 @@
       <textarea matInput placeholder="Address" name="address" [(ngModel)]="address"></textarea>
     </mat-form-field>
   </div>
-  <button mat-raised-button type="submit">Click me!</button>
+  <button mat-raised-button type="submit" [disabled]="showSpinner">Click me!</button>
 </form>
+<app-spinner *ngIf="showSpinner"></app-spinner>
